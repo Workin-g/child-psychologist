@@ -49,6 +49,7 @@ main {
 
 .preview {
   height: 90vh;
+  min-height: 600px;
   width: 100%;
   margin-top: 10vh;
   display: flex;
@@ -117,6 +118,7 @@ main {
 .about {
   width: 100%;
   height: 170vh;
+  min-height: 800px;
   margin-top: 10vh;
   display: flex;
   flex-flow: row wrap;
@@ -207,6 +209,7 @@ div.certificate {
 
 .info {
   width: 100%;
+  min-height: 1500px;
   margin-top: 15vh;
   background: radial-gradient(circle, rgba(110,181,192,1) 0%, rgba(241,187,179,0.5) 45%);
   filter: contrast(3) brightness(2) blur(2);
@@ -227,6 +230,7 @@ div.certificate {
   font-size: calc(1.5vw + 10px);
   font-weight: 600;
   text-align: center;
+  margin-top: 1vh;
 }
 
 .description {
@@ -352,6 +356,7 @@ form {
 .form input, .form button {
   width: 50%;
   height: 12.5%;
+  min-height: 40px;
   border-radius: 10px;
   background-color: rgba(253, 182, 171, 0.6);
   font-size: calc(1vw + 5px);
@@ -372,6 +377,7 @@ form {
 
 .contacts {
   height: 60vh;
+  min-height: 300px;
   width: 100%;
   background-color: rgba(241,187,179, 0.5);
   margin-top: 5vh;
@@ -380,6 +386,7 @@ form {
 .shift {
   width: 50%;
   height: 5vh;
+  min-height: 30px;
   margin: 5vh auto;
   background-color: rgba(76, 225, 248, 0.5);
   text-align: center;
