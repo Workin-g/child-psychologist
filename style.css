@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ::-webkit-scrollbar { width: 0; }
@@ -25,11 +26,20 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: calc(1.5vw + 10px);
+  background: -o-linear-gradient(34deg, rgba(110,181,192,1) 30%, rgba(241,187,179,1) 70%);
   background: linear-gradient(56deg, rgba(110,181,192,1) 30%, rgba(241,187,179,1) 70%);
   z-index: 2;
 }
@@ -52,10 +62,19 @@ main {
   min-height: 600px;
   width: 100%;
   margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .preview .photo {
@@ -67,9 +86,16 @@ main {
 .preview div {
   width: 45%;
   height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .preview span {
@@ -86,6 +112,8 @@ main {
   border-color: #6eb5c0 #fcb ;
   border-radius: 20px;
   outline: none;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
@@ -95,23 +123,36 @@ main {
   height: 100%;
   color: inherit;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .preview button:hover {
   color: black;
+  background: -o-radial-gradient(circle, rgba(241,187,179,1) 15%, rgba(110,181,192,1) 39%);
   background: radial-gradient(circle, rgba(241,187,179,1) 15%, rgba(110,181,192,1) 39%);
   border: none;
-  box-shadow: 0px 5px 1px rgba(241,187,179,1);
+  -webkit-box-shadow: 0px 5px 1px rgba(241,187,179,1);
+          box-shadow: 0px 5px 1px rgba(241,187,179,1);
   border-radius: 20px;
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .preview button:active {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: white;
 }
 
@@ -120,18 +161,34 @@ main {
   height: 170vh;
   min-height: 800px;
   margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   overflow-y: hidden;
   background-color: rgba(84, 135, 143, 0.7);
 }
 
 .education, .experience, .certificates {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: calc(1vw + 10px);
   overflow: hidden;
 }
@@ -152,15 +209,18 @@ main {
 }
 
 .education img {
-  filter: hue-rotate(190deg) saturate(10) brightness(5);
+  -webkit-filter: hue-rotate(190deg) saturate(10) brightness(5);
+          filter: hue-rotate(190deg) saturate(10) brightness(5);
 }
 
 .experience img {
-  filter: hue-rotate(260deg) saturate(5) brightness(5);
+  -webkit-filter: hue-rotate(260deg) saturate(5) brightness(5);
+          filter: hue-rotate(260deg) saturate(5) brightness(5);
 }
 
 .certificates img {
-  filter: hue-rotate(90deg) saturate(5);
+  -webkit-filter: hue-rotate(90deg) saturate(5);
+          filter: hue-rotate(90deg) saturate(5);
 }
 
 .education img, .experience img, .certificates img {
@@ -168,7 +228,8 @@ main {
   height: 100px;
   margin-top: 15px;
   border-radius: 50%;
-  box-shadow: 0px 0px 15px white;
+  -webkit-box-shadow: 0px 0px 15px white;
+          box-shadow: 0px 0px 15px white;
 }
 
 .education div, .experience div, .certificates div {
@@ -194,10 +255,19 @@ main {
 .certificates .certificateContainer {
   height: 90%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-y: scroll;
 }
 
@@ -211,8 +281,10 @@ div.certificate {
   width: 100%;
   min-height: 1500px;
   margin-top: 15vh;
+  background: -o-radial-gradient(circle, rgba(110,181,192,1) 0%, rgba(241,187,179,0.5) 45%);
   background: radial-gradient(circle, rgba(110,181,192,1) 0%, rgba(241,187,179,0.5) 45%);
-  filter: contrast(3) brightness(2) blur(2);
+  -webkit-filter: contrast(3) brightness(2) blur(2);
+          filter: contrast(3) brightness(2) blur(2);
 }
 
 .firstCase {
@@ -260,7 +332,11 @@ div.certificate {
 .accordion-item__trigger svg {
   width: 1.5vw;
   height: 1.5vw;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
   transition: all 0.8s;
 }
 
@@ -270,12 +346,14 @@ div.certificate {
 
 .accordion-item input:checked ~ .accordion-item__trigger {
   text-align: center;
+  background: -o-linear-gradient(298deg, rgba(241,187,179,1) 50%, rgba(110,181,192,1) 50%);
   background: linear-gradient(152deg, rgba(241,187,179,1) 50%, rgba(110,181,192,1) 50%);
   border: 2px solid black;
 }
 
 .accordion-item input:checked ~ .accordion-item__trigger:hover {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .accordion-item input:checked ~ .accordion-item__content {
@@ -285,7 +363,9 @@ div.certificate {
 }
 
 .accordion-item input:checked ~ .accordion-item__trigger svg {
-  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .secondCase {
@@ -301,19 +381,34 @@ div.certificate {
   width: 90%;
   height: 100vh;
   margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 5vh;
 }
 
 .event {
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .event__number {
@@ -322,10 +417,19 @@ div.certificate {
   border: 3px solid blue;
   border-radius: 50%;
   font-size: calc(2vw + 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .event__reason {
@@ -345,12 +449,21 @@ div.certificate {
 }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 50vh;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form input, .form button {
@@ -391,22 +504,35 @@ form {
   background-color: rgba(76, 225, 248, 0.5);
   text-align: center;
   font-size: calc(1vw + 10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
 .on {
   width: 0%;
   height: 100%;
+  -webkit-transition: all 0.7s cubic-bezier(1,.02,1,.02);
+  -o-transition: all 0.7s cubic-bezier(1,.02,1,.02);
   transition: all 0.7s cubic-bezier(1,.02,1,.02);
 }
 
 .off {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.7s cubic-bezier(1,.02,1,.02);
+  -o-transition: all 0.7s cubic-bezier(1,.02,1,.02);
   transition: all 0.7s cubic-bezier(1,.02,1,.02);
 }
 
@@ -495,9 +621,16 @@ form {
   }
 
   .preview {
-    flex-flow: column-reverse nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 7.5vh;
   }
 
